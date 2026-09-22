@@ -15,9 +15,15 @@ public class EcuacionGrado2 {
         sc.close();
 
         //Proceso
-        double operacion1 = (- b + Math.sqrt(Math.pow(b, 2) - (4 * a * c))) / (2 * a);
-        double operacion2 = (- b - Math.sqrt(Math.pow(b, 2) - (4 * a * c))) / (2 * a);
-        boolean resultado = operacion1 < 0;
+        double discriminante = Math.pow(b, 2) - (4 * a * c)
+        double operacion1 = (- b + Math.sqrt(discriminante)) / (2 * a);
+        double operacion2 = (- b - Math.sqrt(discriminante)) / (2 * a);
+        boolean resultado = discriminante < 0;
+        
+        
+        
+       // boolean resultado = operacion1 < 0;  Si el discriminante es negativo la raiz devulve NaN por lo que 
+       // cualquier operación relacional sera falsa da igual el número
 
         //Salida
         System.out.println("Tu ecuación tiene solución real? --> " + resultado);
