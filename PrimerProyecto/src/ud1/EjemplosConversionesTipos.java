@@ -27,7 +27,7 @@ public class EjemplosConversionesTipos {
         char letra = sc.nextLine().charAt(0);
         sc.close();
 
-
+        System.out.println(letra);
     }
 
 }
