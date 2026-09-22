@@ -8,7 +8,7 @@ public class CelsiusAFarenheit {
         
         //Entrada
         Scanner sc = new Scanner(System.in);
-        System.out.print("Introduce una temperatura (en grados celsius): ");
+        System.out.print("Introduce una temperatura (en grados Celsius): ");
         double gradosCelsius = sc.nextDouble();
         sc.close();
 
@@ -16,7 +16,7 @@ public class CelsiusAFarenheit {
         double gradosFarenheit = (gradosCelsius * (9.0 / 5.0)) + 32.0; // Acordarse de poner los números con .0 para que no se trunquen los decimales
 
         //Salida
-        System.out.print(gradosCelsius + " grados celsius equivalen a " + gradosFarenheit + " grados Farenheit.");
+        System.out.print(gradosCelsius + " grados Celsius equivalen a " + gradosFarenheit + " grados Farenheit.");
 
 
 
