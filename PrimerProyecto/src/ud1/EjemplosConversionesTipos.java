@@ -1,5 +1,7 @@
 package ud1;
 
+import java.util.Scanner;
+
 public class EjemplosConversionesTipos {
     public static void main(String[] args) {
         
@@ -19,6 +21,11 @@ public class EjemplosConversionesTipos {
 
         double num2 = Double.parseDouble("3786548.34");
         System.out.println(num2);
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Escribe una letra: ");
+        char letra = sc.nextLine().charAt(0);
+        sc.close();
 
 
     }

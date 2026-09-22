@@ -12,10 +12,11 @@ public class Media {
         int nota1 = sc.nextInt();
         int nota2 = sc.nextInt();
         int nota3 = sc.nextInt();
+        int nota4 = sc.nextInt();
         sc.close();
        
         //Proceso
-        double mediaArimetica = (nota1 + nota2 + nota3) / 3.0; // Es necesario que sea .0 ya que si no es un tipo int y redonde el resultado!!!
+        double mediaArimetica = (nota1 + nota2 + nota3 + nota4) / 4.0; // Es necesario que sea .0 ya que si no es un tipo int y redonde el resultado!!!
 
         //Salida
         System.out.printf("La media de las notas es: %.2f", mediaArimetica);
