@@ -20,7 +20,7 @@ public class EcuacionGrado2 {
 
         //Salida
         System.out.println("Tu ecuación tiene solución real? --> " + resultado);
-        System.out.printf("El resultado de tu ecuación es: %.2f", operacion1);
+        System.out.printf("Los resultados de tu ecuación es: %.2f", operacion1);
         System.out.printf(" y %.2f", operacion2);
         
         
