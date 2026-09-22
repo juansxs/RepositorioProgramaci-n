@@ -1,5 +1,6 @@
 package ud1;
 
+/** @author Juan **/
 import java.util.Scanner;
 
 public class DistanciaEntreDosPuntos {
