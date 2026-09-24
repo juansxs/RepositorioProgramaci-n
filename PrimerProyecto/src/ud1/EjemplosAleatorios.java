@@ -11,6 +11,7 @@ public class EjemplosAleatorios {
         //Generando números aleatorios con Math.random()
 
         int numAleatorio = (int) (Math.random() * NUM_ALUMNOS + 1);
+        System.out.println(numAleatorio);
 
         //Generando números aleatorios con 
         Random rnd = new Random();

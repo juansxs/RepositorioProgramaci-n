@@ -4,29 +4,33 @@ import java.util.Random;
 
 public class NumeroMayor {
     public static void main(String[] args) {
-       
         final int NUM_CONSTANTE_1 = 0;
         final int NUM_CONSTANTE_2 = 50;
+        
+        int numRandom = (int) (NUM_CONSTANTE_1 + Math.random() * (NUM_CONSTANTE_2 - NUM_CONSTANTE_1 + 1));
+
         Random rnd = new Random();
+        int numRandom2 = rnd.nextInt(NUM_CONSTANTE_1, NUM_CONSTANTE_2 + 1);
+        int numRandom3 = rnd.nextInt(NUM_CONSTANTE_1, NUM_CONSTANTE_2 + 1);
+
+        System.out.println("Número1: " + numRandom);
+        System.out.println("Número2: " + numRandom2);
+        System.out.println("Número3: " + numRandom3);
+
+        //Mayor de 2 números
+        //int mayor = numRandom > numRandom2 ? numRandom : numRandom2;
+
+        //int mayor = Math.max(numRandom, numRandom2);
+
+        //Mayor de 3 números
+        //int mayor = numRandom > numRandom2 ? numRandom : numRandom;
+        // mayor = mayor > numRandom3 ? mayor : numRandom3;
+        //int mayor = Math.max(Math.max(numRandom, numRandom2), numRandom3);
         
-        //Primera forma de generar los números aleatorios
-        int numeroAleatorio1 = rnd.nextInt(NUM_CONSTANTE_1, NUM_CONSTANTE_2 + 1);
-        int numeroAleatorio2 = rnd.nextInt(NUM_CONSTANTE_1, NUM_CONSTANTE_2 + 1);
 
-        int numeroElegido = numeroAleatorio1 > numeroAleatorio2 ? numeroAleatorio1 : numeroAleatorio2;
-        
-        System.out.println("Tus números aleatorios son: " + numeroAleatorio1+ " y " + numeroAleatorio2);
-        System.out.println("El mayor de los 2 es: " + numeroElegido);
+      
+        //System.out.println("Mayor: " + mayor);
 
-        //Segunda forma de generar los números aleatorios
-
-        int numAleatorio3 = (int) (Math.random() * NUM_CONSTANTE_2 + 1);
-        int numAleatorio4 = (int) (Math.random() * NUM_CONSTANTE_2 + 1);
-
-        int numeroElegido2 = numeroAleatorio3 > numeroAleatorio4 ? numeroAleatorio3 : numeroAleatorio4;
-        
-        System.out.println("Tus números aleatorios son: " + numeroAleatorio1+ " y " + numeroAleatorio2);
-        System.out.println("El mayor de los 2 es: " + numeroElegido);
 
 
 
