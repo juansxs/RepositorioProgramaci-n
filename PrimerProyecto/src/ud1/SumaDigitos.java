@@ -16,12 +16,12 @@ public class SumaDigitos {
         int num1 = numTotal / 100;  //Trunca
         double numCalc = numTotal / (numTotal % 100.0);
         double num2 = numTotal / (numCalc * 10);
-        int numDosReal = (int)num2;
+        int num2Real = (int)num2;
         int num3 = numTotal % 10; 
-        int sumaNum = num1 + numDosReal + num3;
+        int sumaNum = num1 + num2Real + num3;
     
         //Salida
-        System.out.println("La suma de los números: " + num1 + ", " + numDosReal + " y " + num3 + " es de:");
+        System.out.println("La suma de los números: " + num1 + ", " + num2Real + " y " + num3 + " es de:");
         System.out.print("La suma de los números es: " + sumaNum );
         
 
