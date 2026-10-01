@@ -1,12 +1,12 @@
-package ud1;
+package ud1.ejercicios;
 
 public class EjercicioConversion {
     public static void main(String[] args) {
 
-        short s = 5;
-        int i = s;
-        long l = i;
-        float f = l;
+        //short s = 5;
+        //int i = s;
+        //long l = i;
+        //float f = l;
 
         int num = 80;
         char letra = (char) num;

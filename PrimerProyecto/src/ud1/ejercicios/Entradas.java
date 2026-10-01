@@ -1,21 +1,21 @@
-package ud1;
+package ud1.ejercicios;
 
-import java.util.Scanner;
+//import java.util.Scanner;
 
 /** @author Juan **/
 public class Entradas {
     public static void main(String[] args) {
         
-        Scanner sc = new Scanner(System.in);
+       // Scanner sc = new Scanner(System.in);
 
         System.out.print("Que número de entradas desea? : ");
-        int entradas = sc.nextInt();
+        //int entradas = sc.nextInt();
 
         System.out.print("Introduce el número de entradas infantiles que quieres: ");
         System.out.print("Introduce el número de entradas adultas que quieres: ");
 
-        double precioEntradasInfantiles = sc.nextDouble();
-        double precioEntradasAdultas = sc.nextDouble();
+       // double precioEntradasInfantiles = sc.nextDouble();
+       // double precioEntradasAdultas = sc.nextDouble();
 
         
 

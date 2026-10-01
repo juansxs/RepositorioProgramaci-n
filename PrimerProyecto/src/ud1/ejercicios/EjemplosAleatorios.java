@@ -1,4 +1,4 @@
-package ud1;
+package ud1.ejercicios;
 
 import java.util.Random;
 
