@@ -24,11 +24,9 @@ public class Factura {
             System.out.println("Si tienes derecho a descuento!");
             System.out.printf("El importe total con descuento es de: %.2f euros.", importeConDescuento);
         }
-        if (importeConIva < 100) {
-            System.out.println("No tienes derecho a descuento!");
-            System.out.printf("El importe total sin descuento es de: %.2f euros.", importeConIva);
-        }
-
+        
+        //System.out.printf("El importe total sin  es de: %.2f euros.", importeConDescuento);
+        
     }
 
 }
