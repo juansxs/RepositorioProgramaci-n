@@ -1,4 +1,4 @@
-package ud1;
+package ud1.ejercicios;
 
 public class EjemploCompra {
     public static void main(String[] args) {

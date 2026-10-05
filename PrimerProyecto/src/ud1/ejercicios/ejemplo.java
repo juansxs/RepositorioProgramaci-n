@@ -1,4 +1,4 @@
-package ud1;
+package ud1.ejercicios;
 public class ejemplo {
     public static void main(String[] args) {
         double importe = 120.75;
