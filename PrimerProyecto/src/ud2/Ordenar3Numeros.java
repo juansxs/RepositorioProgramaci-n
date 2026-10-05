@@ -13,12 +13,32 @@ public class Ordenar3Numeros {
         sc.close();
 
         if (num1 > num2 && num1 > num3 && num2 > num3) {
-            System.out.println("El orden de mayor a menor es: " + num1 + ", " + num2 + " y" + num3);
-        } else if (num2 > num1 && num2 > num3 && num1 > num3) {
-            System.out.println("El orden de mayor a menor es: " + num2 + ", " + num1 + " y" + num3);
+            System.out.println("El orden de mayor a menor es: " + num1 + ", " + num2 + " y " + num3);
+        } else if (num1 > num2 && num3 > num2 && num1 > num3) {
+            System.out.println("El orden de mayor a menor es: " + num1 + ", " + num3 + " y " + num2);
+        } else if (num2 > num1 && num3 > num1 && num2 > num3) {
+            System.out.println("El orden de mayor a menor es: " + num2 + ", " + num3 + " y " + num1);
+        } else if (num2 > num1 && num1 > num3 && num2 > num3) {
+            System.out.println("El orden de mayor a menor es: " + num2 + ", " + num1 + " y " + num3);
+        } else if (num3 > num1 && num2 > num1 && num3 > num2) {
+            System.out.println("El orden de mayor a menor es: " + num3 + ", " + num2 + " y " + num1);
+        } else if (num3 > num1 && num1 > num2 && num3 > num2) {
+            System.out.println("El orden de mayor a menor es: " + num3 + ", " + num1 + " y " + num2);
         }
 
-
+        if (num1 > num2 && num1 > num3 && num2 > num3) {
+            System.out.println("El orden de menor a mayor es: " + num3 + ", " + num2 + " y " + num1);
+        } else if (num1 > num2 && num3 > num2 && num1 > num3) {
+            System.out.println("El orden de menor a mayor es: " + num2 + ", " + num3 + " y " + num1);
+        } else if (num2 > num1 && num3 > num1 && num2 > num3) {
+            System.out.println("El orden de menor a mayor es: " + num1 + ", " + num3 + " y " + num2);
+        } else if (num2 > num1 && num1 > num3 && num2 > num3) {
+            System.out.println("El orden de menor a mayor es: " + num3 + ", " + num1 + " y " + num2);
+        } else if (num3 > num1 && num2 > num1 && num3 > num2) {
+            System.out.println("El orden de menor a mayor es: " + num1 + ", " + num2 + " y " + num3);
+        } else if (num3 > num1 && num1 > num2 && num3 > num2) {
+            System.out.println("El orden de menor a mayor es: " + num2 + ", " + num1 + " y " + num3);
+        }
     }
 
 }
