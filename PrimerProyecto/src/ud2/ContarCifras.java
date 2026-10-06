@@ -7,15 +7,11 @@ public class ContarCifras {
     public static void main(String[] args) {
         
         Scanner sc = new Scanner(System.in);
-        System.out.print("Introduce un número entero comprenido entre -99999 y 99999: ");
+        System.out.print("Introduce un número entero comprenido entre 0 y 99999: ");
         int numero = sc.nextInt();
         sc.close();
-        
-        if (numero < 0){
-            numero = numero * -1;
-        }
 
-        if (numero > 99999 || numero < -99999){
+        if (numero > 99999 || numero < 0.){
             System.out.println("¡El número introducido no es válido!");
 
         } else if (numero / 10 < 1.) {
