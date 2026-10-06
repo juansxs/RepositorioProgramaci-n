@@ -3,7 +3,7 @@ package ud2;
 import java.util.Scanner;
 
 /** @author Juan **/
-public class DiaSemana {
+public class DiaDeLaSemana {
     public static void main(String[] args) {
         Scanner sc = new  Scanner(System.in);
         System.out.print("Introduce un número (del 1 al 7) para saber que día de la semana es: ");
