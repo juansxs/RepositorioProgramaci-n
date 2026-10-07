@@ -24,16 +24,67 @@ public class FechaCorrecta {
         } else if (dia < 0) {
             System.out.println("No hay días negativos, introduce una fecha válida");
 
-        } else if (mes < 0 || mes > 12) {
-            System.out.println("No hay meses negativos o mayores a 12, introduce una fecha válida.");
-
         } else if (anho < 0) {
             anho = anho * -1;
-            System.out.println("El día " + dia + " del mes " + mes + " del año " + anho + "a.C. es una fecha válida y real.");
+            System.out.println(
+                    "El día " + dia + " del mes " + mes + " del año " + anho + "a.C. es una fecha válida y real.");
 
         } else {
-            System.out.println("El día " + dia + " del mes " + mes + " del año " + anho + "d.C. es una fecha válida y real.");
-            
+            switch (mes) {
+                case 1:
+                    System.out.println(
+                            "El día " + dia + " de enero del año " + anho + "d.C. es una fecha válida y real.");
+                    break;
+                case 2:
+                    System.out.println("El día " + dia + " de febrero del año " + anho
+                            + "d.C. es una fecha válida y real.");
+                    break;
+                case 3:
+                    System.out.println(
+                            "El día " + dia + " de marzo del año " + anho + "d.C. es una fecha válida y real.");
+                    break;
+                case 4:
+                    System.out.println(
+                            "El día " + dia + " de abril del año " + anho + "d.C. es una fecha válida y real.");
+                    break;
+                case 5:
+                    System.out.println(
+                            "El día " + dia + " de mayo del año " + anho + "d.C. es una fecha válida y real.");
+                    break;
+                case 6:
+                    System.out.println(
+                            "El día " + dia + " de junio del año " + anho + "d.C. es una fecha válida y real.");
+                    break;
+                case 7:
+                    System.out.println(
+                            "El día " + dia + " de julio del año " + anho + "d.C. es una fecha válida y real.");
+                    break;
+                case 8:
+                    System.out.println("El día " + dia + " de agosto del año " + anho
+                            + "d.C. es una fecha válida y real.");
+                    break;
+                case 9:
+                    System.out.println("El día " + dia + " de septiembre del año " + anho
+                            + "d.C. es una fecha válida y real.");
+                    break;
+                case 10:
+                    System.out.println("El día " + dia + " de octubre del año " + anho
+                            + "d.C. es una fecha válida y real.");
+                    break;
+                case 11:
+                    System.out.println("El día " + dia + " de noviembre del año " + anho
+                            + "d.C. es una fecha válida y real.");
+                    break;
+                case 12:
+                    System.out.println("El día " + dia + " de diciembre del año " + anho
+                            + "d.C. es una fecha válida y real.");
+                    break;
+                default:
+                    System.out.println("No hay meses negativos o mayores a 12, introduce una fecha válida.");
+                    break;
+
+            }
+
         }
 
     }
