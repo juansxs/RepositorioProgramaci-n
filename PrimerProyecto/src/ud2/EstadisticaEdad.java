@@ -11,7 +11,7 @@ public class EstadisticaEdad {
         
         int numAlumnos = 0;
         int sumaEdades = 0;
-        int valorMediaEdades = 0;
+        double valorMediaEdades = 0;
         int mayoresEdad = 0;
         while (edad >= 0) {
 
