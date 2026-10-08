@@ -10,11 +10,25 @@ public class ArbolMasAlto {
         String nombre = sc.nextLine();
         System.out.print("Introduce la altura del árbol en cm: ");
         double altura = sc.nextDouble();
+        double alturaMaxima = 0;
+        String cadenaMaxima = null;
 
         while ((altura != -1) && (nombre != null)) {
-            
-        }
+            alturaMaxima = Math.max(0, altura);
+            if (altura == alturaMaxima) {
+                cadenaMaxima = nombre;
+            }
+        
 
+        nombre = sc.nextLine();
+        System.out.print("Introduce otra cadena: ");
+        nombre = sc.nextLine();
+        System.out.print("Introduce otra altura: ");
+        altura = sc.nextDouble();
+
+        
+        }
+        System.out.println("El árbol más alto es :" + cadenaMaxima + " y mide: " + alturaMaxima + " cm.");
     }
 
 }
