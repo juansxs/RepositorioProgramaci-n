@@ -14,17 +14,19 @@ public class ArbolMasAlto {
         String cadenaMaxima = null;
 
         while ((altura != -1) && (nombre != null)) {
-            alturaMaxima = Math.max(0, altura);
+            alturaMaxima = Math.max(altura, alturaMaxima);
             if (altura == alturaMaxima) {
                 cadenaMaxima = nombre;
             }
         
 
-        nombre = sc.nextLine();
+        sc.nextLine();
         System.out.print("Introduce otra cadena: ");
         nombre = sc.nextLine();
+        
         System.out.print("Introduce otra altura: ");
         altura = sc.nextDouble();
+        
 
         
         }
