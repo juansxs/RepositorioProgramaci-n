@@ -26,6 +26,7 @@ public class ArbolMasAlto {
         
         System.out.print("Introduce otra altura: ");
         altura = sc.nextDouble();
+        sc.close();
         
 
         
