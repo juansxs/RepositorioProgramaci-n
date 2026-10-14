@@ -10,12 +10,11 @@ public class Factorial {
         System.out.print("Introdue un número para calcular su factorial: ");
         int num = sc.nextInt();
         sc.close();
-        int factorial = 1;
+        long factorial = 1L;
         int numOriginal = num;
 
-        while (num > 0) {
-            factorial = factorial * num;
-            num--;
+        for (int i = 1; i <= num; i++) {
+            factorial *= i;
         }
         
         System.out.print("El resultado del factorial de " + numOriginal + " es " + factorial);
