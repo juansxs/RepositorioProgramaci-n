@@ -13,6 +13,7 @@ public class Eco {
         while (contador != n) {
         System.out.println("Eco");
         contador++;
+        sc.close();
         }
 
     }
