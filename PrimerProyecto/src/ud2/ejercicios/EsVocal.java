@@ -8,12 +8,19 @@ public class EsVocal {
         Scanner sc = new Scanner(System.in);
         System.out.print("Introduce una letra para saber si  es una vocal o no: ");
         String letra = sc.nextLine();
+        sc.close();
+
+        System.out.println("Hay vocal? --> " + comprobarLetra(letra));
 
     }
-    public static boolean comprobarLetra() {
-        if (letra != "a", "a", "a", "a","a") {
-            
+
+    public static boolean comprobarLetra(String letra) {
+        if (letra.equals("a") || letra.equals("e") || letra.equals("i") || letra.equals("o") || letra.equals("u")) {
+            return true;
+        } else {
+            return false;
         }
+
     }
-   
+
 }
