@@ -10,6 +10,7 @@ public class Cilindro {
         double radio = sc.nextDouble();
         System.out.print("Introduce la altura del mismo cilindro: ");
         double altura = sc.nextDouble();
+        sc.close();
 
         double area = areaCilindro(radio, altura); 
 

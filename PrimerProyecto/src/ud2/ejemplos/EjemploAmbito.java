@@ -15,7 +15,7 @@ public class EjemploAmbito {
             System.out.println(i);
         }
         metodo1();
-        System.out.println(i);
+        System.out.println(i); 
 
         // System.out.println(z); Variable no accesible aquí
 
