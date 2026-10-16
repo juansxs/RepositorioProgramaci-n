@@ -8,6 +8,7 @@ public class NumDivisoresPrimos {
         Scanner sc = new Scanner(System.in);
         System.out.print("Introduce un número para saber sus divisores primos: ");
         int n = sc.nextInt();
+        sc.close();
         System.out.println("El número " + n + " tiene un total de " + divisoresPrimos(n) + " divisores primos." );
     }
     public static int divisoresPrimos(int n) {

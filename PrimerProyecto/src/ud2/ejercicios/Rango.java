@@ -10,8 +10,8 @@ public class Rango {
         System.out.print("Introduce 2 números para saber los números que se comprenden entre ellos: ");
         int num1 = sc.nextInt();
         int num2 = sc.nextInt();
-        int contador = num1;
-        while (contador <= num2) {
+        int contador = num1 + 1;
+        while (contador < num2 ) {
             System.out.println(contador);
             contador++;
         }
