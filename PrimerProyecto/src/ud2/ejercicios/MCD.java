@@ -20,6 +20,7 @@ public class MCD {
         } else {
             return b;
         }
+        
     }
 
 }

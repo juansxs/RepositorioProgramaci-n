@@ -26,7 +26,7 @@ public class UnDiaMas {
 
         }
 
-        dia++;
+        
 
         if ((mes == 1 || mes == 3 || mes == 5 || mes == 7 || mes == 8 || mes == 10) && dia == 31) {
             dia = 0;
@@ -43,11 +43,14 @@ public class UnDiaMas {
             mes++;
         }
 
-        if ((mes == 12) && dia == 31) {
+        if ((mes == 12) && (dia == 31)) {
             dia = 0;
             mes = 1;
             anho++;
         }
+
+        dia++;
+        
         System.out.printf("Fecha incrementada: %02d/%02d/%04d \n", dia, mes, anho);
 
 
