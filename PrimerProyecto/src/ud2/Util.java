@@ -29,4 +29,32 @@ public class Util {
             }
         }
     } 
+
+    public static boolean esPrimo(int n) {
+        for (int i = 2; i < n; i++) {
+            int resultado = n % i;
+            if (resultado == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
+

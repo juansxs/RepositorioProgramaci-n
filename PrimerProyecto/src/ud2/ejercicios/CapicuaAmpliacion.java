@@ -9,6 +9,7 @@ public class CapicuaAmpliacion {
         Scanner sc = new Scanner(System.in);
         System.out.print("Intrduce un número : ");
         long n = sc.nextLong();
+        sc.close();
         System.out.println("Es el número capicua --> " + esCapicuaAmpliado(n));
 
     }

@@ -8,6 +8,7 @@ public class Capicua {
         Scanner sc = new Scanner(System.in);
         System.out.print("Intrduce un número entre 0 y 9999: ");
         int n = sc.nextInt();
+        sc.close();
         System.out.println("Es el número capicua --> " + esCapicua(n));
 
     }
