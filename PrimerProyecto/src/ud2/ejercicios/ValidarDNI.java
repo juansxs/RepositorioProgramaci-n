@@ -1,12 +1,23 @@
 package ud2.ejercicios;
 
+import java.util.Scanner;
+
 /** @author Juan **/
 public class ValidarDNI {
     public static void main(String[] args) {
-        System.out.println(letraDNI(77545829));
+       Scanner sc = new Scanner(System.in);
+       int numDNI ;
+
+       do {
+            System.out.print("Introduce un un número del DNI para saber su letra: ");
+            numDNI = sc.nextInt();
+        } while (numDNI < 1000000 || numDNI > 100000000);
+        System.out.println("Tu letra es: " + letraDNI(numDNI));
     }
 
     public static char letraDNI(int numDNI) {
+            
+        
         int letra = numDNI % 23;
         switch (letra) {
             case 0:
