@@ -7,6 +7,7 @@ public class ValidarDNI {
     public static void main(String[] args) {
        Scanner sc = new Scanner(System.in);
        int numDNI ;
+       sc.close();
 
        do {
             System.out.print("Introduce un un número del DNI para saber su letra: ");
