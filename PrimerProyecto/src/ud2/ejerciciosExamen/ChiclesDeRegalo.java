@@ -24,8 +24,10 @@ static int totalChicles(int chiclesIniciales, int envoloriosRequeridos, int chic
     int chiclesTotales = 0;
 
 
-    chiclesTotales = chiclesIniciales + (chiclesIniciales / 5) + (chiclesTotales / 5);
-    return chiclesTotales;
+    chiclesTotales = chiclesIniciales + (chiclesIniciales / 5);
+    chiclesTotales /= 5;
+    int chiclesFinales = chiclesIniciales + chiclesTotales;
+    return chiclesFinales;
 
 
 
