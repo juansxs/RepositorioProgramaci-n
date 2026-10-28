@@ -1,5 +1,9 @@
 package ud2.ejerciciosExamen;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.Test;
+
 /** @author Juan **/
 public class ChiclesDeRegalo {
     public static void main(String[] args) {
@@ -14,6 +18,22 @@ public class ChiclesDeRegalo {
 
 
     }
+    @Test 
+    public void testChicles() {
+        assertEquals(31, totalChicles(25, 5, 1));
+    }
+
+
+
+
+
+
+
+
+
+
+
+
 
     static int totalChicles(int chiclesIniciales, int envoloriosRequeridos, int chiclesRegalados) {
 
