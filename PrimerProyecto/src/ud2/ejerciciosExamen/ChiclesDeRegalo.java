@@ -4,11 +4,14 @@ package ud2.ejerciciosExamen;
 public class ChiclesDeRegalo {
     public static void main(String[] args) {
         System.out.println(totalChicles(25, 5, 1));
-        System.out.println(totalChicles(5, -1, 1));
         System.out.println(totalChicles(5, 5, 1));
         System.out.println(totalChicles(100, 10, 1));
+        System.out.println(totalChicles(100, 0, 0));
         System.out.println(totalChicles(20, 2, 5));
-        System.out.println(totalChicles(200, 0, 0));
+        System.out.println(totalChicles(100, 10, 2));
+        System.out.println(totalChicles(102, 5, 2));
+
+
 
     }
 
@@ -25,11 +28,15 @@ public class ChiclesDeRegalo {
         }
 
         int chiclesTotales = 0;
+        while (chiclesIniciales >= envoloriosRequeridos) {
+            int chiclesDeRegalo = chiclesIniciales / envoloriosRequeridos * chiclesRegalados;
+            int envoltoriosSobrantes = chiclesIniciales % envoloriosRequeridos;
+            chiclesTotales = chiclesTotales + chiclesDeRegalo;
+            chiclesIniciales = envoltoriosSobrantes + chiclesDeRegalo;
 
-        chiclesTotales = chiclesIniciales + (chiclesIniciales / envoloriosRequeridos);
-        chiclesTotales /= envoloriosRequeridos;
-        int chiclesFinales = chiclesIniciales + chiclesTotales;
-        return chiclesFinales;
+            
+        }
+        return chiclesTotales;
 
     }
 }
