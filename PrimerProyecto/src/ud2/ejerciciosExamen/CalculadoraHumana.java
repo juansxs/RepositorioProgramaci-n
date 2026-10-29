@@ -4,7 +4,6 @@ package ud2.ejerciciosExamen;
 public class CalculadoraHumana {
     public static void main(String[] args) {
         
-        
     }
 
 }
