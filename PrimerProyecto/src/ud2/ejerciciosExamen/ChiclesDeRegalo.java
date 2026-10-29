@@ -20,7 +20,7 @@ public class ChiclesDeRegalo {
     }
     @Test 
     public void testChicles() {
-        assertEquals(31, totalChicles(25, 5, 1));
+        assertEquals(31, totalChicles(25    , 5, 1));
     }
 
 
