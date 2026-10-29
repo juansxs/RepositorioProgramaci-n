@@ -1,0 +1,102 @@
+package ud2.ejercicios;
+
+import java.util.Scanner;
+
+/** @author Juan **/
+public class ValidarDNI {
+    public static void main(String[] args) {
+       Scanner sc = new Scanner(System.in);
+       int numDNI ;
+       
+
+       do {
+            System.out.print("Introduce un un número del DNI para saber su letra: ");
+            numDNI = sc.nextInt();
+        } while (numDNI < 1000000 || numDNI > 100000000);
+        System.out.println("Tu letra es: " + letraDNI(numDNI));
+        sc.close();
+    }
+
+    public static char letraDNI(int numDNI) {
+            
+        
+        int letra = numDNI % 23;
+        switch (letra) {
+            case 0:
+                return 'T';
+
+            case 1:
+                return 'R';
+
+            case 2:
+                return 'W';
+
+            case 3:
+                return 'A';
+
+            case 4:
+                return 'G';
+
+            case 5:
+                return 'M';
+
+            case 6:
+                return 'Y';
+
+            case 7:
+                return 'F';
+
+            case 8:
+                return 'P';
+
+            case 9:
+                return 'D';
+
+            case 10:
+                return 'X';
+
+            case 11:
+                return 'B';
+
+            case 12:
+                return 'N';
+
+            case 13:
+                return 'J';
+
+            case 14:
+                return 'Z';
+
+            case 15:
+                return 'S';
+
+            case 16:
+                return 'Q';
+
+            case 17:
+                return 'V';
+
+            case 18:
+                return 'H';
+
+            case 19:
+                return 'L';
+
+            case 20:
+                return 'C';
+
+            case 21:
+                return 'K';
+
+            case 22:
+                return 'E';
+
+            default:
+                return ' ';
+
+            }
+
+        
+
+    }
+}

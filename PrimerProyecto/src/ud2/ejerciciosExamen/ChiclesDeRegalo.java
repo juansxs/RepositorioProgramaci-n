@@ -14,13 +14,37 @@ public class ChiclesDeRegalo {
         System.out.println(totalChicles(20, 2, 5));
         System.out.println(totalChicles(100, 10, 2));
         System.out.println(totalChicles(102, 5, 2));
-
+        System.out.println("hola");
 
 
     }
     @Test 
     public void testChicles() {
         assertEquals(31, totalChicles(25    , 5, 1));
+    }
+        @Test 
+    public void testChicles1() {
+        assertEquals(6, totalChicles(5, 5, 1));
+    }
+        @Test 
+    public void testChicles2() {
+        assertEquals(111, totalChicles(100, 10, 1));
+    }
+        @Test 
+    public void testChicles3() {
+        assertEquals(100, totalChicles(100, 0, 0));
+    }
+        @Test 
+    public void testChicles4() {
+        assertEquals(-1, totalChicles(20, 2, 5));
+    }
+        @Test 
+    public void testChicles5() {
+        assertEquals(-1, totalChicles(10, -1, 0));
+    }
+        @Test 
+    public void testChicles6() {
+        assertEquals(124, totalChicles(100, 10, 2));
     }
 
 
@@ -46,15 +70,11 @@ public class ChiclesDeRegalo {
         } else if (envoloriosRequeridos == 0) {
             return chiclesIniciales;
         }
-
+        int chiclesRegaladosPrimero = chiclesIniciales / envoloriosRequeridos;
         int chiclesTotales = 0;
         while (chiclesIniciales >= envoloriosRequeridos) {
-            int chiclesDeRegalo = chiclesIniciales / envoloriosRequeridos * chiclesRegalados;
-            int envoltoriosSobrantes = chiclesIniciales % envoloriosRequeridos;
-            chiclesTotales = chiclesTotales + chiclesDeRegalo;
-            chiclesIniciales = envoltoriosSobrantes + chiclesDeRegalo;
-
-            
+        chiclesTotales = chiclesIniciales + (chiclesRegaladosPrimero) + (chiclesRegaladosPrimero / envoloriosRequeridos);
+        chiclesIniciales -= envoloriosRequeridos;
         }
         return chiclesTotales;
 

@@ -1,5 +1,7 @@
 package ud2;
 
+import java.util.Scanner;
+
 public class Util {
     public static boolean esBisiesto(int anho) {
         return anho % 400 == 0 || anho % 4 == 0 && anho % 100 != 0;
@@ -39,7 +41,15 @@ public class Util {
         }
         return true;
     }
+    public static double leerDouble(Scanner sc, String msg) {
+        System.out.print(msg);
+        while (!sc.hasNextDouble()) {
+            sc.nextLine();
+            System.out.println("Entrada no válida. Escribe un número válido");
 
+        }
+        return sc.nextDouble();
+    }
 
 
 
