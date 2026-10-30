@@ -5,6 +5,8 @@ public class DecimalBinario {
     public static void main(String[] args) {
         System.out.println(decimalABinario(13));
         System.out.println(decimalABinario(53));
+        System.out.println(decimalABinario(23));
+        System.out.println(decimalABinario(242));
     }
 
     public static String decimalABinario(int numero) {

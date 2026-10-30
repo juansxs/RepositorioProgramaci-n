@@ -16,25 +16,34 @@ public class JuegoCuantoTiempo {
 
         System.out.println("Pulsa Enter cuando hayan trasncurrido " + segundosAleatorios + " segundos.");
         LocalTime primerTiempo = LocalTime.now();
-        int segundosIniciales = primerTiempo.getSecond();
-        int minutosIniciales = primerTiempo.getMinute();
         sc.nextLine();
         sc.close();
         LocalTime segundoTiempo = LocalTime.now();
-        int segundosFinales = segundoTiempo.getSecond();
-        int minutosFinales = segundoTiempo.getMinute();
-        int tiempoTotal = (segundosFinales + (minutosFinales * 60)) - (segundosIniciales + (minutosIniciales * 60));
 
-        if (tiempoTotal == segundosAleatorios) {
+        if (segundosTranscurridos(primerTiempo, segundoTiempo) == segundosAleatorios) {
             System.out.println("Has acertado los segundos!");
 
-        } else if (tiempoTotal < segundosAleatorios) {
-            int segundosFaltaron = segundosAleatorios - tiempoTotal;
+        } else if (segundosTranscurridos(primerTiempo, segundoTiempo) < segundosAleatorios) {
+            int segundosFaltaron = segundosAleatorios - segundosTranscurridos(primerTiempo, segundoTiempo);
             System.out.println("Fallaste. Has pulsado Enter " + segundosFaltaron + " segundos antes de lo necesario");
 
-        } else if (tiempoTotal > segundosAleatorios) {
-            int segundosSobraron = tiempoTotal - segundosAleatorios;
+        } else if (segundosTranscurridos(primerTiempo, segundoTiempo) > segundosAleatorios) {
+            int segundosSobraron = segundosTranscurridos(primerTiempo, segundoTiempo) - segundosAleatorios;
             System.out.println("Fallaste. Has pulsado Enter " + segundosSobraron + " segundos después de lo necesario");
         }
+    }
+
+    public static int segundosTranscurridos(LocalTime primerTiempo, LocalTime segundoTiempo) {
+        int segundosIniciales = primerTiempo.getSecond();
+        int minutosIniciales = primerTiempo.getMinute();
+        int horasInicales = primerTiempo.getHour();
+
+        int segundosFinales = segundoTiempo.getSecond();
+        int minutosFinales = segundoTiempo.getMinute();
+        int horasFinales = segundoTiempo.getHour();
+
+        int tiempoTotal = (segundosFinales + (minutosFinales * 60) + (horasFinales * 3600))
+                - (segundosIniciales + (minutosIniciales * 60) + (horasInicales * 3600));
+        return tiempoTotal;
     }
 }
