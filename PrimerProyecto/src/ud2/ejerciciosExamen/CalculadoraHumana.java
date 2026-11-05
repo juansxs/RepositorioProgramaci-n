@@ -14,17 +14,26 @@ public class CalculadoraHumana {
         int numeroFallos = 0;
         mostrarInstrucciones();
         do {
-        int primerNumero = generarNumeroAleatorio(MINIMO_NUMERO_ALEATORIO, MAXIMO_NUMERO_ALEATORIO, rnd);
-        int segundoNumero = generarNumeroAleatorio(MINIMO_NUMERO_ALEATORIO, MAXIMO_NUMERO_ALEATORIO, rnd);
-        String simboloOperacion = generarOperacion(rnd);
-        int resultadoOperacion = 0;
+            int primerNumero = generarNumeroAleatorio(MINIMO_NUMERO_ALEATORIO, MAXIMO_NUMERO_ALEATORIO, rnd);
+            int segundoNumero = generarNumeroAleatorio(MINIMO_NUMERO_ALEATORIO, MAXIMO_NUMERO_ALEATORIO, rnd);
+            String simboloOperacion = generarOperacion(rnd);
+            int resultadoOperacion = 0;
 
-        System.out.println(primerNumero + simboloOperacion + segundoNumero);
-        resultadoOperacion = resultadoOperacion(primerNumero, segundoNumero, simboloOperacion, resultadoOperacion, rnd,
-                MINIMO_NUMERO_ALEATORIO, MAXIMO_NUMERO_ALEATORIO);
-        System.out.println(resultadoOperacion);
-        pedirResultado(resultadoOperacion, sc, numeroAciertos, numeroFallos);
-        } while(numeroAciertos + numeroFallos < 7);
+            System.out.println(primerNumero + simboloOperacion + segundoNumero);
+            resultadoOperacion = resultadoOperacion(primerNumero, segundoNumero, simboloOperacion, resultadoOperacion,
+                    rnd,
+                    MINIMO_NUMERO_ALEATORIO, MAXIMO_NUMERO_ALEATORIO);
+            System.out.println(resultadoOperacion);
+
+            if (pedirResultado(resultadoOperacion, sc, numeroAciertos, numeroFallos)) {
+                System.out.println("Has acertado");
+                numeroAciertos++;
+            } else {
+                System.out.println("Has fallado");
+                numeroFallos++;
+            }
+
+        } while (numeroAciertos + numeroFallos < 7);
 
     }
 
@@ -69,37 +78,37 @@ public class CalculadoraHumana {
             case "*" ->
                 resultadoOperacion = primerNumero * segundoNumero;
             case "/" -> {
-                while (primerNumero % segundoNumero != 0) {
-                    primerNumero = rnd.nextInt(MINIMO_NUMERO_ALEATORIO, MAXIMO_NUMERO_ALEATORIO + 1);
-                    segundoNumero = rnd.nextInt(MINIMO_NUMERO_ALEATORIO, MAXIMO_NUMERO_ALEATORIO + 1);
+                if (primerNumero % segundoNumero == 0) {
+                    return primerNumero / segundoNumero;
+                } else {
+                    resultadoOperacion(primerNumero, segundoNumero, simboloOperacion,
+                            resultadoOperacion, rnd, MINIMO_NUMERO_ALEATORIO, MAXIMO_NUMERO_ALEATORIO);
                 }
-                resultadoOperacion = primerNumero / segundoNumero;
             }
             default ->
                 resultadoOperacion = 0;
         }
+        if (resultadoOperacion < 200 && resultadoOperacion > 0) {
+            return resultadoOperacion;
+        } else {
+            resultadoOperacion(primerNumero, segundoNumero, simboloOperacion,
+                    resultadoOperacion, rnd, MINIMO_NUMERO_ALEATORIO, MAXIMO_NUMERO_ALEATORIO);
+        }
+        return 0;
 
-        return resultadoOperacion;
     }
 
-    public static int pedirResultado(int resultadoOperacion, Scanner sc, int numeroAciertos, int numeroFallos) {
+    public static boolean pedirResultado(int resultadoOperacion, Scanner sc, int numeroAciertos, int numeroFallos) {
         System.out.println("Introduce el resultado de la operación : ");
         int resultadoUsuarioOperacion = sc.nextInt();
 
         if (resultadoOperacion == resultadoUsuarioOperacion) {
-            System.out.println("¡Has acertado!");
-            numeroAciertos++;
+            return true;
 
         } else {
-            System.out.println("¡Has fallado!");
-            numeroFallos++;
+            return false;
         }
 
-        if (numeroAciertos == 3) {
-            System.out.println("Has fallado 3 veces. Game over.");
-        }
-
-        return resultadoOperacion;
     }
 
 }
