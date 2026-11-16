@@ -31,14 +31,15 @@ public class ArrayNumeros {
                 contadorDeCeros++;
             }
         }
+        sc.close();
         double mediaPositivos = (double) sumaNumerosPositivos / contadorDePositivos;
         double mediaNegativos = (double) sumaNumerosNegativos / (contadorDeNegativos);
 
-        if (mediaPositivos == 0) {
+        if (contadorDePositivos == 0) {
             System.out.printf(
                     "La media de los negativos es de %.2f, no se han introducido números positivos y se han introducido %d ceros.",
                     mediaNegativos, contadorDeCeros);
-        } else if (mediaNegativos == 0) {
+        } else if (contadorDeNegativos == 0) {
             System.out.printf(
                     "La media de los números positivos es de %.2f, no se han introducido números negativos y se han introducido %d ceros.",
                     mediaPositivos, contadorDeCeros);
