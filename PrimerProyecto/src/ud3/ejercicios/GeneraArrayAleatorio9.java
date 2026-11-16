@@ -10,6 +10,7 @@ public class GeneraArrayAleatorio9 {
         Scanner sc = new Scanner(System.in);
         System.out.println("Introduce el tamaño de la lista: ");
         int n = sc.nextInt();
+        sc.close();
         System.out.println("La lista tenía un tamaño de " + n + " y contiene los siguientes números: " + Arrays.toString(arrayAleatorio(n)));
     }
     public static int[] arrayAleatorio(int n) {
