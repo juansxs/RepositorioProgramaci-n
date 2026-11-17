@@ -20,15 +20,15 @@ public class MontanaRusa {
         int contadorPicos = 0;
         
         for (int i = 0; i < alturas.length; i++) {
-            alturas[i] = alturaActual;
+            alturaActual = alturas[i];
             
             if (i != 0) {
-                alturas[i - 1] = alturaAnterior;
+                alturaAnterior = alturas[i - 1];
             }
             if (i < alturas.length - 1) {
-                alturas[i + 1] = alturaPosterior;
+                alturaPosterior = alturas[i + 1];
             }
-            if (alturaActual > alturaAnterior && alturaActual > alturaPosterior) {
+            if ((alturaActual > alturaAnterior && alturaActual > alturaPosterior) || ) {
                 contadorPicos++;
             }
         }
