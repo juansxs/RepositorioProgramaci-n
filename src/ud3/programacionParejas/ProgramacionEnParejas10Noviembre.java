@@ -51,21 +51,15 @@ public class ProgramacionEnParejas10Noviembre {
     }
 
     public static int ultimoNegativo(int[] nums) {
-         int contadorPositivos = 0;
+     
         for (int i = nums.length - 1  ; i >= 0; i--) {
 
             if (nums[i] < 0) {
-                return nums.length - i;
-            } else {
-                contadorPositivos++;
-            }
+                return  i;
+            } 
         }
 
-        if (contadorPositivos == nums.length) {
-            return -1;
-        }
-
-        return 0;
+        return -1;
 
 
     }
