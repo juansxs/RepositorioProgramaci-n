@@ -28,7 +28,7 @@ public class MontanaRusa {
             if (i < alturas.length - 1) {
                 alturaPosterior = alturas[i + 1];
             }
-            if ((alturaActual > alturaAnterior && alturaActual > alturaPosterior) || ) {
+            if ((alturaActual > alturaAnterior && alturaActual > alturaPosterior)) {
                 contadorPicos++;
             }
         }
