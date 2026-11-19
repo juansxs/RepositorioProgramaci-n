@@ -3,7 +3,7 @@ package ud3.ejercicios;
 import java.util.Arrays;
 
 /** @author Juan */
-public class insertarEnPosicion {
+public class InsertarEnPosicion {
     public static void main(String[] args) {
         int[] t = { 1, 2, 3, 4, 5 };
         System.out.println(Arrays.toString(insertarEnPosicionArray(t, 3, -1)));

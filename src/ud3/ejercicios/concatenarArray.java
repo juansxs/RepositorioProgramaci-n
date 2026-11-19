@@ -3,7 +3,7 @@ package ud3.ejercicios;
 import java.util.Arrays;
 
 /** @author Juan */
-public class concatenarArray {
+public class ConcatenarArray {
     public static void main(String[] args) {
         int[] t1 = { 1, 2, 3, 4, 5 };
         int[] t2 = { 6, 7, 8, 9, 10 };

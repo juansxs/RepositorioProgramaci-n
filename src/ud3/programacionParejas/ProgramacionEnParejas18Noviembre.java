@@ -5,10 +5,10 @@ import java.util.Arrays;
 /** @author Juan, Adán */
 public class ProgramacionEnParejas18Noviembre {
     public static void main(String[] args) {
-        int[] array = { 1, 2, 3, 4, 5, 6, 7};
-        System.out.println(buscar(array, 1));
-        System.out.println(Arrays.toString(eliminarPorPosicion((array), 4)));
-
+        int[] array = { 1, 2, 3, 4, 5, 6, 7 };
+        // System.out.println(buscar(array, 1));
+        // System.out.println(Arrays.toString(eliminarPorPosicion((array), 4)));
+        System.out.println(Arrays.toString(filtrarMayoresQue(array, 6)));
     }
 
     public static int buscar(int[] t, int clave) {
@@ -33,6 +33,21 @@ public class ProgramacionEnParejas18Noviembre {
             }
             for (int i = pos; i < t.length - 1; i++) {
                 tAux[i] = t[i + 1];
+            }
+
+        }
+        return tAux;
+    }
+
+    static int[] filtrarMayoresQue(int[] t, int limite) {
+        int contador = 0;
+        int[] tAux = new int[contador];
+        
+        for (int i = 0; i < t.length; i++) {
+
+            if (t[i] > limite) {
+                tAux[i] = t[i];
+                contador++;
             }
 
         }
